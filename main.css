@@ -1,0 +1,85 @@
+:root{
+    --steel-blue:steelblue;
+    --dim-gray:dimgray;
+    --rosy-brown:rosybrown;
+    --bright-yellow:yellow;
+    --left-250:250px;
+    --zero:0px;
+   
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.container{
+    width:500px;
+    height:500px;
+    margin:100px auto;
+    text-align: center;
+    line-height: 500px;
+    background-color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    position: relative;
+
+
+
+}
+
+.box{
+width:250px;
+height:250px;
+position: absolute;
+transform: translate(0px);
+transition: 1000ms;
+}
+.blue{
+background:var(--steel-blue);
+left:var(--zero);
+top:var(--zero);
+}
+.dimgray{
+    background:var(--dim-gray);
+    top: var(--zero);
+    left:var(--left-250);    
+}
+.rosybrown{
+    background-color: var(--rosy-brown);
+    bottom: var(--zero);
+    left:var(--left-250);    
+}
+        
+.yellow{
+    background-color: var(--bright-yellow);
+    bottom: var(--zero);
+    left:var(--zero);   
+} 
+
+/* div.container:hover div.box{
+   transform: rotate(180deg);
+    transition: 1000ms;   
+} */
+div.container:hover div.blue{
+    left:-250px;    
+    transform: rotate(90deg) ;
+    transition: 1000ms;
+}
+div.container:hover div.dimgray
+{
+    left:500px;
+    transform: rotate(-90deg);
+    transition: 1000ms;
+}
+div.container:hover div.rosybrown{
+    left:500px;
+    transform: rotate(90deg);
+    transition: 1000ms;
+}
+div.container:hover div.yellow{
+    left:-250px;
+    transform: rotate(-90deg);
+    transition: 1000ms;
+}
